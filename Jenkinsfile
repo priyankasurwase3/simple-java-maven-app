@@ -5,9 +5,9 @@ pipeline {
         }
     }
     stages {
-        stage ('git checkout'){
+        stage ('buildt'){
             steps {
-              git branch: 'main', url: 'https://github.com/priyankasurwase3/simple-java-maven-app.git'
+              sh 'mvn clean install'
             }
         }
     }
