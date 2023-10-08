@@ -15,14 +15,15 @@ pipeline {
               sh 'mvn clean install'
             }
         }
-    }
+    
 
 
     stage('SonarQube analysis') {
     steps {
     withSonarQubeEnv('sonae server') { // If you have configured more than one global server connection, you can specify its name
       sh "${scannerHome}/bin/sonar-scanner"
-    }
+      } 
+     }
     }
   }
 }
