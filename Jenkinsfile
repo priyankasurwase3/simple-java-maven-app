@@ -6,7 +6,7 @@ pipeline {
     }
         environment {
             PATH = "/opt/apache-maven-3.9.5/bin:$PATH"
-            scannerHome = tool 'sonar scanner'
+            scannerHome = tool 'sonar-scanner'
         
     }
     stages {
@@ -20,7 +20,7 @@ pipeline {
 
     stage('SonarQube analysis') {
     steps {
-    withSonarQubeEnv('sonar server') { // If you have configured more than one global server connection, you can specify its name
+    withSonarQubeEnv('sonar-server') { // If you have configured more than one global server connection, you can specify its name
       sh "${scannerHome}/bin/sonar-scanner"
       } 
      }
