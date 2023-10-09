@@ -73,6 +73,30 @@ pipeline {
             }
         }   
     }   
+
+   def imageName = 'https://priya123e2e.jfrog.io/mycicde2e-docker/mycicde2e'
+   def version   = '1.0.0'
+    stage(" Docker Build ") {
+      steps {
+        script {
+           echo '<--------------- Docker Build Started --------------->'
+           app = docker.build(imageName+":"+version)
+           echo '<--------------- Docker Build Ends --------------->'
+        }
+      }
+    }
+
+            stage (" Docker Publish "){
+        steps {
+            script {
+               echo '<--------------- Docker Publish Started --------------->'  
+                docker.withRegistry(registry, 'jfrog'){
+                    app.push()
+                }    
+               echo '<--------------- Docker Publish Ended --------------->'  
+            }
+        }
+    }
     
   }
 }
