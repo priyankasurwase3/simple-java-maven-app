@@ -75,7 +75,7 @@ pipeline {
     }   
 
    def imageName = 'https://priya123e2e.jfrog.io/mycicde2e-docker/mycicde2e'
-   def version   = '1.0.0'
+   def version   = '1.0-SNAPSHOT'
     stage(" Docker Build ") {
       steps {
         script {
