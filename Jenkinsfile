@@ -1,4 +1,6 @@
 def registry = 'https://priya123e2e.jfrog.io'
+def imageName = 'https://priya123e2e.jfrog.io/mycicde2e-docker-local/mycicde2e'
+def version   = '1.0-SNAPSHOT'
 pipeline {
     agent  {
         node {
@@ -74,8 +76,7 @@ pipeline {
         }   
     }   
 
-   def imageName = 'https://priya123e2e.jfrog.io/mycicde2e-docker/mycicde2e'
-   def version   = '1.0-SNAPSHOT'
+
     stage(" Docker Build ") {
       steps {
         script {
