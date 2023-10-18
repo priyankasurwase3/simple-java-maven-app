@@ -1,0 +1,28 @@
+job('createSeed') {
+params{
+stringParam('SHPlibbranch',develop,'SHP git branch')
+stringParam('logicalenv',sct,'ikplogicalenv')
+}
+scm{
+git{
+ remote {
+   name('origin')
+   url('')
+ }
+}
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
