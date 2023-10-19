@@ -1,4 +1,5 @@
-job('myjob')
+job('myjob'){
 steps{
   shell ('echo Hi')
+}
 }
