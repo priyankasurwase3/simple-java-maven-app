@@ -1,17 +1,30 @@
 job('createSeed') {
+
+description('This is a seed job')
+
 params{
 stringParam('SHPlibbranch',develop,'SHP git branch')
 stringParam('logicalenv',sct,'ikplogicalenv')
 }
 scm{
-git{
- remote {
+ git{
+  remote {
    name('origin')
-   url('')
+   url('https://github.com/priyankasurwase3/simple-java-maven-app.git')
  }
+branch('main')
 }
 }
 
+steps{
+folder('kong') {
+ displayName('kong')
+ description('This is a kong folder')
+}
+folder ('kong/ikp')
+ displayName('ikp')
+ description('This is a kong folder for ikp')
+}
 
 }
 
