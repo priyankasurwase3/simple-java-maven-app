@@ -23,7 +23,9 @@ folder ('kong/ikp')
  displayName('ikp')
  description('This is a kong folder for ikp')
 }
-
+dsl{
+external('test.grrovy')
+}
 }
 
 
