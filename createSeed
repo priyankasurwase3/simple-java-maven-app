@@ -12,7 +12,7 @@ scm{
    name('origin')
    url('https://github.com/priyankasurwase3/simple-java-maven-app.git')
  }
-branch('main')
+branch('master')
 }
 }
 
