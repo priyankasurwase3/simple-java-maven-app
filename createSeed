@@ -19,12 +19,13 @@ folder('kong') {
  displayName('kong')
  description('This is a kong folder')
 }
-folder ('kong/ikp')
+folder ('kong/ikp') {
  displayName('ikp')
  description('This is a kong folder for ikp')
 }
 dsl{
 external('test.grrovy')
+}
 }
 }
 
