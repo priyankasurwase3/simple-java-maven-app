@@ -24,7 +24,7 @@ folder ('kong/ikp') {
  description('This is a kong folder for ikp')
 }
 dsl{
-external('test.grrovy')
+external('test.groovy')
 lookupStrategy('SEED_JOB')
 }
 
