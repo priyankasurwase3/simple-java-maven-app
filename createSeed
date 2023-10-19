@@ -25,6 +25,7 @@ folder ('kong/ikp') {
 }
 dsl{
 external('test.grrovy')
+lookupStrategy('SEED_JOB')
 }
 
 }
