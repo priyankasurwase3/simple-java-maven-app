@@ -1,8 +1,6 @@
 job('createSeed') {
-
 description('This is a seed job')
-
-params{
+parameters{
 stringParam('SHPlibbranch',develop,'SHP git branch')
 stringParam('logicalenv',sct,'ikplogicalenv')
 }
